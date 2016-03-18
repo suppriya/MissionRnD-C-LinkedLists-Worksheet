@@ -13,11 +13,13 @@ NOTES:
 
 #include <stdio.h>
 
+
 struct node {
 	int num;
 	struct node *next;
 };
 
+
 struct node * removeEveryKthNode(struct node *head, int K) {
-	return NULL;
+		return NULL;
 }
