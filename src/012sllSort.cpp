@@ -22,5 +22,42 @@ struct node {
 };
 
 void sll_012_sort(struct node *head){
+	struct node* temp= (struct node*)malloc(sizeof(struct node));
+	temp = head;
+	int p = 0, q = 0, r = 0;
+	while (temp != NULL)
+	{
+		if (temp->data == 0)
+		{
+			p++;
+		}
+		else if (temp->data == 1)
+		{
+			q++;
+		}
+		else if (temp->data==2)
+		{
+			r++;
+		}
+		temp = temp ->next;
+	}
+	temp = head;
+	int i;
+	for (i = 0; i < p; i++)
+	{
+		temp->data = 0;
+		temp = temp->next;
+	}
+	for (; i < q+p; i++)
+	{
+		temp->data = 1;
+		temp = temp->next;
+	}
+	for (; i < r+p+q; i++)
+	{
+		temp->data = 2;
+		temp = temp->next;
+	}
+	head = temp;
 	
 }
